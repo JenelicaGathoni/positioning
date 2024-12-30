@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  font-family: "Roboto";
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  color: #2c2c2c;
+}
+main {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+}
+.logo {
+  margin-right: auto;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: #656565;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.navlinks {
+  display: flex;
+  list-style-type: none;
+  gap: 80px;
+  padding-right: 20px;
+}
+a:visited {
+  color: floralwhite;
+}
+
+.Intro {
+  margin-block: 20px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-top: 20px;
+}
+.carousel-item {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.carousel-item figcaption {
+  position: absolute;
+  top: 0;
+  left: 100;
+  background-color: #fff;
+  padding: 10px;
+  width: 300px;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.carousel-item:hover figcaption {
+  opacity: 1;
+  transform: translateX(0);
+  left: calc(100% + 20px);
+}
